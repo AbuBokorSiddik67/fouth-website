@@ -1,0 +1,58 @@
+/* Section 1 */
+p::before{
+    content: "hello ";
+    color: aqua;
+    font-size: medium;
+    background-color: darkseagreen;
+}
+p::after{
+    content: " after add";
+}
+
+/* Section 2  = Set a counter*/
+body {
+    counter-reset: section;
+  }
+  
+  h2::before {
+    counter-increment: section;
+    content: "girl " counter(section) ": ";
+  }
+
+  /* Section 3 */
+  h3::before{
+    content: "🥴  ";
+  }
+
+  /* section 4 =specificity style order style priority */
+  h4{
+    color: aqua;
+  }
+  .n1{
+    color: blue;
+  }
+  #n2{
+    color: brown;
+  }
+
+  /* Section 5 */
+  .sec-5{
+    background-color: aquamarine;
+  }
+  div{
+    height: 100px;
+    width: 100px;
+    background-color:rgb(117, 143, 134);
+  }
+  #i1{
+    background-color: blue;
+  }
+  #i2{
+    background-color:blueviolet;
+    position:sticky;
+    left: 20px;
+    top: 100px;
+  }
+  #i3{
+    background-color:cadetblue;
+  }
